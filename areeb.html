@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+
+    <canvas id="snow-canvas"></canvas>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+
+
+    <div class="burger" id="burger">
+        <span></span><span></span><span></span>
+      </div>
+    
+      <div class="menu-wrapper" id="menuWrapper">
+        <div class="menu-item menu-home"><span>Home</span></div>
+        <div class="menu-item menu-about"><span>About</span></div>
+        <div class="menu-item menu-services"><span>Services</span></div>
+        <div class="menu-item menu-portfolio"><span>Portfolio</span></div>
+        <div class="menu-item menu-contact"><span>Contact</span></div>
+      </div>
+
+
+
+
+    <section class="hero">
+        <div class="floating-shapes">
+            <div class="shape shape-1 animated" data-animation="morphShape" data-duration="3s" data-delay="0.1s"></div>
+            <div class="shape shape-2 animated" data-animation="floatingGlow" data-duration="2.5s" data-delay="0.3s"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-greeting animated" data-animation="bounceSlideInTop" data-duration="1.2s" data-delay="0.1s">Hello I am</div>
+                <h1 id="heroHeadline" class="animated" data-animation="elasticSlideInLeft" data-duration="1.5s" data-delay="0.3s"><span class="hero-animated-name" id="heroAnimatedName"></span></h1>
+                <p class="animated" data-animation="staggeredFadeIn" data-duration="1.1s" data-delay="0.1s">Full-stack developer with 5+ years of experience building scalable web applications and digital experiences that users love.</p>
+                
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary animated" data-animation="premiumZoomIn" data-duration="1.2s" data-delay="0.7s">Hire Me</a>
+                    <a href="#projects" class="btn btn-secondary animated" data-animation="premiumZoomIn" data-duration="1.2s" data-delay="0.9s">View Work</a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item animated" data-animation="bounceSlideInBottom" data-duration="1.2s" data-delay="1.1s">
+                        <div class="stat-number" data-target="50" data-plus="true" style="opacity: 1;">0+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item animated" data-animation="bounceSlideInBottom" data-duration="1.2s" data-delay="1.3s">
+                        <div class="stat-number" data-target="100"  style="opacity: 1;">0%</div>
+                        <div class="stat-label">Satisfaction</div>
+                    </div>
+                    <div class="stat-item animated" data-animation="bounceSlideInBottom" data-duration="1.2s" data-delay="1.5s">
+                        <div class="stat-number" data-target="5" data-plus="true"  style="opacity: 1;">0+</div>
+                        <div class="stat-label">Years Exp</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image animated" data-animation="premiumZoomOut" data-duration="1.5s" data-delay="0.7s">
+                <div class="code-window animated" data-animation="elasticSlideInRight" data-duration="1.5s" data-delay="1.1s">
+                    <div class="code-curtain" id="codeCurtain">
+                        <div class="code-gif-wrapper">
+                            <img src="assets/hero-image.gif" alt="Hero" class="hero-gif" />
+                        </div>
+                        <div class="curtain-text animated" data-animation="elasticSlideInLeft" data-duration="1.2s" data-delay="1.7s">Click and scroll</div>
+                    </div>
+                    <div class="window-header animated" data-animation="shimmer" data-duration="1.5s" data-delay="1.9s">
+                        <div class="window-btn btn-red"></div>
+                        <div class="window-btn btn-yellow"></div>
+                        <div class="window-btn btn-green"></div>
+                        <div class="window-title">portfolio.js</div>
+                    </div>
+                    <div class="code-content" id="codeEditor">
+                        <!-- Code will be inserted by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <section class="about" id="about">
+      <div class="container">
+          <div class="section-header">
+              <div class="section-subtitle animated" data-animation="bounceSlideInTop" data-duration="1.2s" data-delay="0.1s">Beyond the Code</div>
+              <h2 class="section-title animated" data-animation="elasticSlideInLeft" data-duration="1.5s" data-delay="0.3s">My <span class="text-gradient">Expertise</span></h2>
+              <div class="section-divider animated" data-animation="staggeredFadeIn" data-duration="1.1s" data-delay="0.5s"></div>
+          </div>
+          
+          <div class="about-grid">
+              <!-- Profile Column -->
+              <div class="profile-column">
+                  <div class="profile-card">
+                      <div class="profile-image">
+                        <img src="assets/myimage.png" alt="aboutus">
+                      </div>
+                      <div class="profile-content">
+                          <h3 class="animated" data-animation="elasticSlideInRight" data-duration="1.3s" data-delay="1.3s">Areeb Anwar</h3>
+                          <p class="title animated" data-animation="bounceSlideInBottom" data-duration="1.2s" data-delay="1.5s">Full Stack Developer</p>
+                          
+                          <p class="profile-desc animated" data-animation="staggeredFadeIn" data-duration="1.1s" data-delay="1.7s">Crafting seamless digital experiences with code and creativity.</p>
+                          <p class="profile-desc animated" data-animation="staggeredFadeIn" data-duration="1.1s" data-delay="1.9s">Always learning, always building, always shipping.</p>
+
+                          <div class="profile-socials outlined">
+  <a href="https://linkedin.com/in/areebanwar" class="social-link linkedin animated" data-animation="premiumZoomIn" data-duration="1.2s" data-delay="2.1s" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  <a href="https://facebook.com/areebanwar" class="social-link facebook animated" data-animation="premiumZoomIn" data-duration="1.2s" data-delay="2.3s" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://instagram.com/areebanwar" class="social-link instagram animated" data-animation="premiumZoomIn" data-duration="1.2s" data-delay="2.5s" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://dev.to/areebanwar" class="social-link devto animated" data-animation="premiumZoomIn" data-duration="1.2s" data-delay="2.7s" target="_blank" title="Dev.to"><i class="fab fa-dev"></i></a>
+  <a href="https://pinterest.com/areebanwar" class="social-link pinterest animated" data-animation="premiumZoomIn" data-duration="1.2s" data-delay="2.9s" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+  <a href="https://github.com/areebanwar" class="social-link github animated" data-animation="premiumZoomIn" data-duration="1.2s" data-delay="3.1s" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+</div>
+
+                          <div class="profile-buttons">
+                              <a href="#contact" class="btn btn-primary animated" data-animation="bounceSlideInBottom" data-duration="1.2s" data-delay="3.3s">Hire Me</a>
+                              <a href="#" class="btn btn-secondary animated" data-animation="bounceSlideInBottom" data-duration="1.2s" data-delay="3.5s">View CV</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Skills Column -->
+              <div class="skills-column">
+                  <div class="skills-card">
+                      <h3 class="animated" data-animation="elasticSlideInLeft" data-duration="1.3s" data-delay="1.1s">Technical Mastery</h3>
+                      <p class="skills-intro animated" data-animation="staggeredFadeIn" data-duration="1.1s" data-delay="1.3s">I specialize in building performant, scalable web applications with cutting-edge technologies.</p>
+                      
+                      <div class="skills-categories">
+                          <!-- Frontend Skills -->
+                          <div class="skills-category animated" data-animation="bounceSlideInTop" data-duration="1.2s" data-delay="1.5s">
+                              <h4 class="category-title animated" data-animation="elasticSlideInRight" data-duration="1.2s" data-delay="1.7s">
+                                  <svg class="category-icon" viewBox="0 0 24 24">
+                                      <path d="M12 18l-6-6h12l-6 6zm0-12l6 6H6l6-6z"/>
+                                  </svg>
+                                  Frontend
+                              </h4>
+                              <div class="skills-tags">
+                                  <span class="skill-tag react animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="1.9s"><span class="skill-icon"><svg viewBox="0 0 32 32"><g><circle fill="#61dafb" cx="16" cy="16" r="2.5"/><g stroke="#61dafb" stroke-width="2" fill="none"><ellipse rx="11" ry="4.2" cx="16" cy="16" transform="rotate(60 16 16)"/><ellipse rx="11" ry="4.2" cx="16" cy="16" transform="rotate(120 16 16)"/><ellipse rx="11" ry="4.2" cx="16" cy="16"/></g></g></svg></span><span class="skill-label">React</span></span>
+                                  <span class="skill-tag next animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="2.1s"><span class="skill-icon"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#000"/><path d="M7 16h9l7 7" stroke="#fff" stroke-width="2" fill="none"/></svg></span><span class="skill-label">Next.js</span></span>
+                                  <span class="skill-tag typescript animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="2.3s"><span class="skill-icon"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#3178c6"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">TS</text></svg></span><span class="skill-label">TypeScript</span></span>
+                                  <span class="skill-tag tailwind animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="2.5s"><span class="skill-icon"><svg viewBox="0 0 32 32"><path d="M16 10c2.5-4 8-4 10 0-2-2-5-2-7 0-2 2-5 2-7 0 2.5-4 8-4 10 0z" fill="#38bdf8"/><path d="M6 22c2.5-4 8-4 10 0-2-2-5-2-7 0-2 2-5 2-7 0 2.5-4 8-4 10 0z" fill="#38bdf8"/></svg></span><span class="skill-label">Tailwind</span></span>
+                                  <span class="skill-tag gsap animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="2.7s"><span class="skill-icon"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#88ce02"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">GSAP</text></svg></span><span class="skill-label">GSAP</span></span>
+                                  <span class="skill-tag framer animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="2.9s"><span class="skill-icon"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0055ff"/><path d="M10 10h12v6H16l6 6H10v-6h6z" fill="#fff"/></svg></span><span class="skill-label">Framer Motion</span></span>
+                              </div>
+                          </div>
+                          
+                          <!-- Backend Skills -->
+                          <div class="skills-category animated" data-animation="bounceSlideInTop" data-duration="1.2s" data-delay="2.1s">
+                              <h4 class="category-title animated" data-animation="elasticSlideInRight" data-duration="1.2s" data-delay="2.3s">
+                                  <svg class="category-icon" viewBox="0 0 24 24">
+                                      <path d="M3 3h18v18H3V3zm16 16V5H5v14h14zM7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"/>
+                                  </svg>
+                                  Backend
+                              </h4>
+                              <div class="skills-tags">
+                                  <span class="skill-tag node animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="2.5s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#3c873a"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">Node</text></svg></span><span class="skill-label">Node.js</span></span>
+                                  <span class="skill-tag express animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="2.7s"><span class="skill-icon"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#222"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">Ex</text></svg></span><span class="skill-label">Express</span></span>
+                                  <span class="skill-tag nestjs animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="2.9s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#ea2845"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">Nest</text></svg></span><span class="skill-label">NestJS</span></span>
+                                  <span class="skill-tag graphql animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="3.1s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#e535ab"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">GQL</text></svg></span><span class="skill-label">GraphQL</span></span>
+                                  <span class="skill-tag postgres animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="3.3s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#336791"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">PG</text></svg></span><span class="skill-label">PostgreSQL</span></span>
+                                  <span class="skill-tag mongodb animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="3.5s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#47a248"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">MDB</text></svg></span><span class="skill-label">MongoDB</span></span>
+                              </div>
+                          </div>
+                          
+                          <!-- WordPress Skills -->
+                          <div class="skills-category animated" data-animation="bounceSlideInTop" data-duration="1.2s" data-delay="2.7s">
+                              <h4 class="category-title animated" data-animation="elasticSlideInRight" data-duration="1.2s" data-delay="2.9s">
+                                  <svg class="category-icon" viewBox="0 0 24 24">
+                                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                      <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+                                  </svg>
+                                  WordPress
+                              </h4>
+                              <div class="skills-tags">
+                                  <span class="skill-tag theme animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="3.1s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#21759b"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">WP</text></svg></span><span class="skill-label">Theme Dev</span></span>
+                                  <span class="skill-tag plugin animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="3.3s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#23282d"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">PLG</text></svg></span><span class="skill-label">Custom Plugins</span></span>
+                                  <span class="skill-tag woo animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="3.5s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#96588a"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">Woo</text></svg></span><span class="skill-label">WooCommerce</span></span>
+                                  <span class="skill-tag headless animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="3.7s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#0087be"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">HLS</text></svg></span><span class="skill-label">Headless WP</span></span>
+                                  <span class="skill-tag acf animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="3.9s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#00c281"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">ACF</text></svg></span><span class="skill-label">ACF</span></span>
+                                  <span class="skill-tag elementor animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="4.1s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#92003b"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">EL</text></svg></span><span class="skill-label">Elementor</span></span>
+                              </div>
+                          </div>
+                          
+                          <!-- Tools & DevOps -->
+                          <div class="skills-category animated" data-animation="bounceSlideInTop" data-duration="1.2s" data-delay="3.3s">
+                              <h4 class="category-title animated" data-animation="elasticSlideInRight" data-duration="1.2s" data-delay="3.5s">
+                                  <svg class="category-icon" viewBox="0 0 24 24">
+                                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                      <path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/>
+                                  </svg>
+                                  DevOps
+                              </h4>
+                              <div class="skills-tags">
+                                  <span class="skill-tag docker animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="3.7s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#2496ed"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">DKR</text></svg></span><span class="skill-label">Docker</span></span>
+                                  <span class="skill-tag aws animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="3.9s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#ff9900"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">AWS</text></svg></span><span class="skill-label">AWS</span></span>
+                                  <span class="skill-tag cicd animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="4.1s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#5e5e5e"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">CI</text></svg></span><span class="skill-label">CI/CD</span></span>
+                                  <span class="skill-tag git animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="4.3s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#f34f29"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">Git</text></svg></span><span class="skill-label">Git</span></span>
+                                  <span class="skill-tag webpack animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="4.5s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#1c78c0"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">WP</text></svg></span><span class="skill-label">Webpack</span></span>
+                                  <span class="skill-tag vite animated" data-animation="premiumZoomIn" data-duration="1.1s" data-delay="4.7s"><span class="skill-icon"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="16" ry="16" fill="#646cff"/><text x="16" y="22" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">Vite</text></svg></span><span class="skill-label">Vite</span></span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+
+
+
+
+  <section class="services" id="services">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-subtitle">What I Offer</div>
+            <h2 class="section-title">Premium <span class="text-gradient">Services</span></h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card" data-service="1">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                    </svg>
+                </div>
+                <h3>Custom Web Development</h3>
+                <p>Tailored solutions built from scratch to match your exact business requirements and workflows.</p>
+                <div class="service-features">
+                    <span>React/Next.js</span>
+                    <span>TypeScript</span>
+                    <span>Node.js</span>
+                </div>
+                <div class="service-hover-content">
+                    <h4>Custom Web Development</h4>
+                    <ul>
+                        <li>100% custom-coded solutions</li>
+                        <li>Performance optimization</li>
+                        <li>API integrations</li>
+                        <li>Responsive design</li>
+                        <li>Ongoing support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card" data-service="2">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
+                        <path d="M7 12h2v5H7zm4-7h2v12h-2zm4 4h2v8h-2z"/>
+                    </svg>
+                </div>
+                <h3>WordPress Excellence</h3>
+                <p>High-performance WordPress solutions with custom themes, plugins, and headless architectures.</p>
+                <div class="service-features">
+                    <span>Custom Themes</span>
+                    <span>WooCommerce</span>
+                    <span>Headless WP</span>
+                </div>
+                <div class="service-hover-content">
+                    <h4>WordPress Excellence</h4>
+                    <ul>
+                        <li>Custom theme development</li>
+                        <li>Plugin customization</li>
+                        <li>WooCommerce solutions</li>
+                        <li>Headless WordPress</li>
+                        <li>Performance tuning</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card" data-service="3">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+                    </svg>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Beautiful, intuitive interfaces designed to convert visitors into customers and keep them engaged.</p>
+                <div class="service-features">
+                    <span>Figma</span>
+                    <span>Prototyping</span>
+                    <span>User Testing</span>
+                </div>
+                <div class="service-hover-content">
+                    <h4>UI/UX Design</h4>
+                    <ul>
+                        <li>User research & personas</li>
+                        <li>Wireframing & prototyping</li>
+                        <li>UI design systems</li>
+                        <li>Interaction design</li>
+                        <li>Usability testing</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-card" data-service="4">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+                    </svg>
+                </div>
+                <h3>API Development</h3>
+                <p>Robust API solutions that power your applications and enable seamless integrations.</p>
+                <div class="service-features">
+                    <span>REST</span>
+                    <span>GraphQL</span>
+                    <span>WebSockets</span>
+                </div>
+                <div class="service-hover-content">
+                    <h4>API Development</h4>
+                    <ul>
+                        <li>Custom API development</li>
+                        <li>Third-party API integration</li>
+                        <li>Documentation</li>
+                        <li>Authentication systems</li>
+                        <li>Performance optimization</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="service-card" data-service="5">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+                    </svg>
+                </div>
+                <h3>Performance Optimization</h3>
+                <p>Make your existing website faster, more efficient, and better optimized for search engines.</p>
+                <div class="service-features">
+                    <span>Lighthouse</span>
+                    <span>Web Vitals</span>
+                    <span>CDN</span>
+                </div>
+                <div class="service-hover-content">
+                    <h4>Performance Optimization</h4>
+                    <ul>
+                        <li>Page speed analysis</li>
+                        <li>Core Web Vitals</li>
+                        <li>Image optimization</li>
+                        <li>Lazy loading</li>
+                        <li>Caching strategies</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="service-card" data-service="6">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+                    </svg>
+                </div>
+                <h3>Technical Consulting</h3>
+                <p>Expert guidance on architecture, technology selection, and development best practices.</p>
+                <div class="service-features">
+                    <span>Architecture</span>
+                    <span>Code Review</span>
+                    <span>Mentoring</span>
+                </div>
+                <div class="service-hover-content">
+                    <h4>Technical Consulting</h4>
+                    <ul>
+                        <li>Technology stack selection</li>
+                        <li>System architecture</li>
+                        <li>Code reviews</li>
+                        <li>Team mentoring</li>
+                        <li>Technical roadmaps</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-header" >
+    <div class="section-subtitle">What I Create</div>
+    <h2 class="section-title">My <span class="text-gradient">Projects</span></h2>
+    <div class="section-divider"></div>
+</div>
+<section class="infinite-carousel">
+    
+    <div class="carousel-track">
+      <!-- Project 1 -->
+      <div class="carousel-slide">
+        <div class="project-media">
+          <img src="https://images.nightcafe.studio/jobs/KrLWYKzG7lj4o4ZiCz07/KrLWYKzG7lj4o4ZiCz07--0--hxk16.jpg?tr=w-1600,c-at_max" alt="E-Commerce Platform">
+        </div>
+        <div class="project-details">
+          <div class="tech-stack">
+            <span class="tech-tag react">React</span>
+            <span class="tech-tag node">Node.js</span>
+            <span class="tech-tag mongodb">MongoDB</span>
+          </div>
+          <h3 class="project-title">E-Commerce Platform</h3>
+          <p class="project-description">Full-featured online store with custom dashboard and payment integration</p>
+          <a href="#" class="project-link">View Case Study →</a>
+        </div>
+      </div>
+  
+      <!-- Project 2 -->
+      <div class="carousel-slide">
+        <div class="project-media">
+          <img src="https://images.nightcafe.studio/jobs/KrLWYKzG7lj4o4ZiCz07/KrLWYKzG7lj4o4ZiCz07--0--hxk16.jpg?tr=w-1600,c-at_max" alt="WordPress Site">
+        </div>
+        <div class="project-details">
+          <div class="tech-stack">
+            <span class="tech-tag wordpress">WordPress</span>
+            <span class="tech-tag woo">WooCommerce</span>
+            <span class="tech-tag elementor">Elementor</span>
+          </div>
+          <h3 class="project-title">Fashion Marketplace</h3>
+          <p class="project-description">High-performance e-commerce site with custom product configurator</p>
+          <a href="#" class="project-link">View Case Study →</a>
+        </div>
+      </div>
+  
+      <!-- Project 3 -->
+      <div class="carousel-slide">
+        <div class="project-media">
+          <img src="https://images.nightcafe.studio/jobs/KrLWYKzG7lj4o4ZiCz07/KrLWYKzG7lj4o4ZiCz07--0--hxk16.jpg?tr=w-1600,c-at_max" alt="Mobile App">
+        </div>
+        <div class="project-details">
+          <div class="tech-stack">
+            <span class="tech-tag react">React Native</span>
+            <span class="tech-tag graphql">GraphQL</span>
+          </div>
+          <h3 class="project-title">Fitness Tracker</h3>
+          <p class="project-description">AI-powered workout companion with real-time coaching</p>
+          <a href="#" class="project-link">View Case Study →</a>
+        </div>
+      </div>
+      
+      <!-- Clones will be added by JavaScript -->
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="client-testimonials-section">
+    <div class="testimonials-track-container">
+      <!-- Review 1 -->
+      <div class="testimonial-row-1">
+        <div class="testimonial-text-1" data-testimonial-profile="testimonial-profile-1">
+          "This developer completely transformed our digital presence with their exceptional skills."
+        </div>
+        <div class="testimonial-profile-card" id="testimonial-profile-1">
+          <img src="https://images.nightcafe.studio/jobs/wWgZHuhCPsV7vlDswpuk/wWgZHuhCPsV7vlDswpuk--0--kq7tk.jpg?tr=w-640,c-at_max" alt="Sarah Johnson" class="testimonial-profile-img">
+          <div class="testimonial-profile-info">
+            <h3 class="testimonial-profile-name">Sarah Johnson</h3>
+            <div class="testimonial-profile-meta">
+              <span class="testimonial-profile-details">Female • USA</span>
+              <div class="testimonial-review-platform">
+                <span class="testimonial-platform-name">Trustpilot</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Review 2 -->
+      <div class="testimonial-row-2">
+        <div class="testimonial-text-2" data-testimonial-profile="testimonial-profile-2">
+          "The most professional developer we've worked with - delivered beyond expectations."
+        </div>
+        <div class="testimonial-profile-card" id="testimonial-profile-2">
+          <img src="profile2.jpg" alt="Michael Chen" class="testimonial-profile-img">
+          <div class="testimonial-profile-info">
+            <h3 class="testimonial-profile-name">Michael Chen</h3>
+            <div class="testimonial-profile-meta">
+              <span class="testimonial-profile-details">Male • Singapore</span>
+              <div class="testimonial-review-platform">
+                <span class="testimonial-platform-name">Clutch</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Review 3 -->
+      <div class="testimonial-row-3">
+        <div class="testimonial-text-3" data-testimonial-profile="testimonial-profile-3">
+          "Their attention to detail and problem-solving skills are truly remarkable."
+        </div>
+        <div class="testimonial-profile-card" id="testimonial-profile-3">
+          <img src="profile3.jpg" alt="Emma Rodriguez" class="testimonial-profile-img">
+          <div class="testimonial-profile-info">
+            <h3 class="testimonial-profile-name">Emma Rodriguez</h3>
+            <div class="testimonial-profile-meta">
+              <span class="testimonial-profile-details">Female • Spain</span>
+              <div class="testimonial-review-platform">
+                <span class="testimonial-platform-name">Google Reviews</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <div class="section-header" >
+    <div class="section-subtitle">What I Show</div>
+    <h2 class="section-title">My <span class="text-gradient">Projects Library</span></h2>
+    <div class="section-divider"></div>
+</div>
+
+<section class="project-demo-showcase">
+    <!-- AdminEase -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop" alt="AdminEase">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>AdminEase</h3>
+                    <p>eCommerce dashboard</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-react" title="React"></i>
+                        <i class="fa fa-bolt" title="Vite"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quran Academy -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=400&h=200&fit=crop" alt="Quran Academy">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>Quran Academy</h3>
+                    <p>An islamic web</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-react" title="React"></i>
+                        <i class="fa fa-bolt" title="Vite"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WoodWave -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=200&fit=crop" alt="WoodWave">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>WoodWave</h3>
+                    <p>A furniture store</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-html5" title="HTML5"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-code" title="JavaScript"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Podcasto -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=400&h=200&fit=crop" alt="Podcasto">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>Podcasto</h3>
+                    <p>A podcast creation studio</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-html5" title="HTML5"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-code" title="JavaScript"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Listplace -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=200&fit=crop" alt="Listplace">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>Listplace</h3>
+                    <p>A restaurant booking web</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-html5" title="HTML5"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-code" title="JavaScript"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BeautyPalace -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=200&fit=crop" alt="BeautyPalace">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>BeautyPalace</h3>
+                    <p>A beauty products store</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-html5" title="HTML5"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-code" title="JavaScript"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aurora -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop" alt="Aurora">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>Aurora</h3>
+                    <p>Web service provider web</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-html5" title="HTML5"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-code" title="JavaScript"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AutoLax -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&h=200&fit=crop" alt="AutoLax">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>AutoLax</h3>
+                    <p>Cars showroom</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-html5" title="HTML5"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-code" title="JavaScript"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ShoeLand -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=200&fit=crop" alt="ShoeLand">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>ShoeLand</h3>
+                    <p>Shoes store web</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-html5" title="HTML5"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-code" title="JavaScript"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Duplicate cards for infinite loop -->
+    <!-- AdminEase -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop" alt="AdminEase">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>AdminEase</h3>
+                    <p>eCommerce dashboard</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-react" title="React"></i>
+                        <i class="fa fa-bolt" title="Vite"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quran Academy -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=400&h=200&fit=crop" alt="Quran Academy">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>Quran Academy</h3>
+                    <p>An islamic web</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-react" title="React"></i>
+                        <i class="fa fa-bolt" title="Vite"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WoodWave -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=200&fit=crop" alt="WoodWave">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>WoodWave</h3>
+                    <p>A furniture store</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-html5" title="HTML5"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-code" title="JavaScript"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Podcasto -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=400&h=200&fit=crop" alt="Podcasto">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>Podcasto</h3>
+                    <p>A podcast creation studio</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-html5" title="HTML5"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-code" title="JavaScript"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Listplace -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=200&fit=crop" alt="Listplace">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>Listplace</h3>
+                    <p>A restaurant booking web</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-html5" title="HTML5"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-code" title="JavaScript"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BeautyPalace -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=200&fit=crop" alt="BeautyPalace">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>BeautyPalace</h3>
+                    <p>A beauty products store</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-html5" title="HTML5"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-code" title="JavaScript"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aurora -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop" alt="Aurora">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>Aurora</h3>
+                    <p>Web service provider web</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-html5" title="HTML5"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-code" title="JavaScript"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AutoLax -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&h=200&fit=crop" alt="AutoLax">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>AutoLax</h3>
+                    <p>Cars showroom</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-html5" title="HTML5"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-code" title="JavaScript"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ShoeLand -->
+    <div class="container">
+        <div class="card">
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=200&fit=crop" alt="ShoeLand">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="content">
+                    <h3>ShoeLand</h3>
+                    <p>Shoes store web</p>
+                    <div class="tech-stack">
+                        <i class="fa fa-html5" title="HTML5"></i>
+                        <i class="fa fa-css3" title="CSS3"></i>
+                        <i class="fa fa-code" title="JavaScript"></i>
+                        <i class="fa fa-fire" title="Firebase"></i>
+                    </div>
+                    <button class="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div id="demoModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="modal-images" id="modalImages">
+            <!-- Images will be dynamically loaded here -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<div class="section-header" >
+    <div class="section-subtitle">When you are Ready</div>
+    <h2 class="section-title">Contact <span class="text-gradient">Us</span></h2>
+    <div class="section-divider"></div>
+</div>
+
+
+<section class="social-media-contact-section-wrapper-container">
+<ul class="social-media-contact-links-list-container">
+    <li class="social-media-contact-link-item-facebook">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-media-contact-link-facebook">
+            <i class="fa fa-facebook social-media-contact-icon-facebook" aria-hidden="true"></i>
+            <span class="social-media-contact-text-facebook"> - Facebook</span>
+        </a>
+    </li>
+    <li class="social-media-contact-link-item-instagram">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-media-contact-link-instagram">
+            <i class="fa fa-instagram social-media-contact-icon-instagram" aria-hidden="true"></i>
+            <span class="social-media-contact-text-instagram"> - Instagram</span>
+        </a>
+    </li>
+    <li class="social-media-contact-link-item-linkedin">
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-media-contact-link-linkedin">
+            <i class="fa fa-linkedin social-media-contact-icon-linkedin" aria-hidden="true"></i>
+            <span class="social-media-contact-text-linkedin"> - LinkedIn</span>
+        </a>
+    </li>
+    <li class="social-media-contact-link-item-whatsapp">
+        <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer" class="social-media-contact-link-whatsapp">
+            <i class="fa fa-whatsapp social-media-contact-icon-whatsapp" aria-hidden="true"></i>
+            <span class="social-media-contact-text-whatsapp"> - WhatsApp</span>
+        </a>
+    </li>
+    <li class="social-media-contact-link-item-devto">
+        <a href="https://dev.to" target="_blank" rel="noopener noreferrer" class="social-media-contact-link-devto">
+            <i class="fa fa-code social-media-contact-icon-devto" aria-hidden="true"></i>
+            <span class="social-media-contact-text-devto"> - DEV.to</span>
+        </a>
+    </li>
+    <li class="social-media-contact-link-item-telegram">
+        <a href="https://t.me/your-username" target="_blank" rel="noopener noreferrer" class="social-media-contact-link-telegram">
+            <i class="fa fa-telegram social-media-contact-icon-telegram" aria-hidden="true"></i>
+            <span class="social-media-contact-text-telegram"> - Telegram</span>
+        </a>
+    </li>
+    <li class="social-media-contact-link-item-github">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-media-contact-link-github">
+            <i class="fa fa-github social-media-contact-icon-github" aria-hidden="true"></i>
+            <span class="social-media-contact-text-github"> - GitHub</span>
+        </a>
+    </li>
+    <li class="social-media-contact-link-item-website">
+        <a href="https://www.webdevtales.com" target="_blank" rel="noopener noreferrer" class="social-media-contact-link-website">
+            <i class="fa fa-globe social-media-contact-icon-website" aria-hidden="true"></i>
+            <span class="social-media-contact-text-website"> - Website</span>
+        </a>
+    </li>
+
+    
+</ul>
+
+</section>
+  
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-column">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+                <li class="footer-link"><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li class="footer-link"><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li class="footer-link"><a href="#services"><i class="fas fa-cog"></i> Services</a></li>
+                <li class="footer-link"><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>
+                <li class="footer-link"><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h3 class="footer-title">Services</h3>
+            <ul class="footer-links">
+                <li class="footer-link"><a href="#"><i class="fab fa-react"></i> React Development</a></li>
+                <li class="footer-link"><a href="#"><i class="fab fa-wordpress"></i> WordPress</a></li>
+                <li class="footer-link"><a href="#"><i class="fas fa-mobile-alt"></i> UI/UX Design</a></li>
+                <li class="footer-link"><a href="#"><i class="fas fa-server"></i> Backend API</a></li>
+                <li class="footer-link"><a href="#"><i class="fas fa-chart-line"></i> Optimization</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h3 class="footer-title">Contact Info</h3>
+            <ul class="footer-links">
+                <li class="footer-link"><a href="mailto:hello@areeb.com"><i class="fas fa-envelope"></i> hello@areeb.com</a></li>
+                <li class="footer-link"><a href="tel:+1234567890"><i class="fas fa-phone"></i> +123 456 7890</a></li>
+                <li class="footer-link"><a href="#"><i class="fas fa-map-marker-alt"></i> Remote Worldwide</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h3 class="footer-title">Let's Talk</h3>
+            <div class="cube-container">
+                <div class="cube-btn">
+                    <div class="cube-face front">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Call Me</span>
+                    </div>
+                    <div class="cube-face back">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="cube-face right">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="cube-face left">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="cube-face top">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="cube-face bottom">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>
+            <span>&copy; 2023 Areeb Anwar</span>
+            <i class="fas fa-circle" style="font-size: 4px;"></i>
+            <span>All rights reserved</span>
+            <i class="fas fa-circle" style="font-size: 4px;"></i>
+            <span>Made with <i class="fas fa-heart" style="color: var(--accent);"></i> and <i class="fas fa-code" style="color: var(--primary);"></i></span>
+        </p>
+    </div>
+</footer>
+
+
+
+
+    <script>
+
+
+
+// JS FOR HAMBURGER MENU
+
+const burger = document.getElementById('burger');
+    const items = document.querySelectorAll('.menu-item');
+    let open = false;
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      open = !open;
+      items.forEach((item, i) => {
+        setTimeout(() => {
+          item.classList.toggle('show', open);
+        }, i * 150);
+      });
+    });
+
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#&*";
+
+    function animateLetter(span, finalChar) {
+      return new Promise(resolve => {
+        let count = 0;
+        const max = 10 + Math.floor(Math.random() * 5);
+
+        // Store interval on span for later clearing
+        span._lockerInterval = setInterval(() => {
+          span.textContent = chars[Math.floor(Math.random() * chars.length)];
+          span.style.transform = `translateY(${Math.random() > 0.5 ? '-8px' : '8px'})`;
+          count++;
+
+          if (count >= max) {
+            clearInterval(span._lockerInterval);
+            span.textContent = finalChar;
+            span.style.transform = "translateY(0)";
+            resolve();
+          }
+        }, 40);
+      });
+    }
+
+    function animateWordSequentially(wordEl, wordText) {
+      wordEl.innerHTML = '';
+      const letters = wordText.split('');
+      const spans = letters.map(char => {
+        const span = document.createElement('span');
+        span.className = 'letter';
+        span.textContent = char;
+        wordEl.appendChild(span);
+        return span;
+      });
+
+      (async () => {
+        for (let i = 0; i < spans.length; i++) {
+          // If animation was cancelled, break
+          if (spans[i]._cancelAnimation) break;
+          await animateLetter(spans[i], letters[i]);
+        }
+      })();
+    }
+
+    document.querySelectorAll('.menu-item').forEach(menuItem => {
+      const span = menuItem.querySelector('span');
+      const originalText = span.textContent;
+
+      menuItem.addEventListener('mouseenter', () => {
+        // Remove any previous cancel flag
+        span._cancelAnimation = false;
+        animateWordSequentially(span, originalText);
+      });
+
+      menuItem.addEventListener('mouseleave', () => {
+        // Set cancel flag and clear any running interval
+        span._cancelAnimation = true;
+        if (span._lockerInterval) clearInterval(span._lockerInterval);
+        // Restore original text and transform
+        span.textContent = originalText;
+        span.style.transform = "translateY(0)";
+      });
+    });
+
+
+
+
+
+
+
+
+
+        // Animated cursor
+        const cursor = document.querySelector('.cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            setTimeout(() => {
+                cursorFollower.style.left = e.clientX + 'px';
+                cursorFollower.style.top = e.clientY + 'px';
+            }, 100);
+        });
+        
+        // Interactive elements effect
+        const interactiveElements = document.querySelectorAll('a, button, .code-window');
+        
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                cursorFollower.style.transform = 'translate(-50%, -50%) scale(0.5)';
+                cursorFollower.style.width = '30px';
+                cursorFollower.style.height = '30px';
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursorFollower.style.width = '40px';
+                cursorFollower.style.height = '40px';
+            });
+        });
+        
+        // Animated code editor
+        const codeLines = [
+            '<span class="code-comment">// Developer Portfolio</span>',
+            '<span class="code-keyword">const</span> <span class="code-function">developer</span> = {',
+            '  <span class="code-string">name</span>: <span class="code-string">\'Alex Developer\'</span>,',
+            '  <span class="code-string">title</span>: <span class="code-string">\'Full Stack Developer\'</span>,',
+            '  <span class="code-string">location</span>: <span class="code-string">\'Remote / Worldwide\'</span>,',
+            '  <span class="code-string">about</span>: <span class="code-string">\'Passionate about building scalable, user-centric web applications.\'</span>,',
+            '  <span class="code-string">skills</span>: [',
+            '    <span class="code-string">\'JavaScript\'</span>, <span class="code-string">\'TypeScript\'</span>, <span class="code-string">\'React\'</span>, <span class="code-string">\'Next.js\'</span>,',
+            '    <span class="code-string">\'Node.js\'</span>, <span class="code-string">\'Express\'</span>, <span class="code-string">\'MongoDB\'</span>, <span class="code-string">\'PostgreSQL\'</span>,',
+            '    <span class="code-string">\'GraphQL\'</span>, <span class="code-string">\'REST APIs\'</span>, <span class="code-string">\'Docker\'</span>, <span class="code-string">\'AWS\'</span>,',
+            '    <span class="code-string">\'CI/CD\'</span>, <span class="code-string">\'Jest\'</span>, <span class="code-string">\'Cypress\'</span>, <span class="code-string">\'Figma\'</span>',
+            '  ],',
+            '  <span class="code-string">projects</span>: [',
+            '    { <span class="code-string">name</span>: <span class="code-string">\'E-Commerce Platform\'</span>, <span class="code-string">stack</span>: [<span class="code-string">\'React\'</span>, <span class="code-string">\'Node.js\'</span>] },',
+            '    { <span class="code-string">name</span>: <span class="code-string">\'Real-time Chat App\'</span>, <span class="code-string">stack</span>: [<span class="code-string">\'Next.js\'</span>, <span class="code-string">\'Socket.io\'</span>] },',
+            '    { <span class="code-string">name</span>: <span class="code-string">\'Portfolio Website\'</span>, <span class="code-string">stack</span>: [<span class="code-string">\'HTML\'</span>, <span class="code-string">\'CSS\'</span>, <span class="code-string">\'JS\'</span>] },',
+            '    { <span class="code-string">name</span>: <span class="code-string">\'SaaS Dashboard\'</span>, <span class="code-string">stack</span>: [<span class="code-string">\'React\'</span>, <span class="code-string">\'GraphQL\'</span>] }',
+            '  ],',
+            '  <span class="code-string">certifications</span>: [',
+            '    <span class="code-string">\'AWS Certified Developer\'</span>, <span class="code-string">\'Scrum Master\'</span>',
+            '  ],',
+            '  <span class="code-string">hobbies</span>: [<span class="code-string">\'Open Source\'</span>, <span class="code-string">\'UI/UX Design\'</span>, <span class="code-string">\'Travel\'</span>],',
+            '  <span class="code-string">contact</span>: {',
+            '    <span class="code-string">email</span>: <span class="code-string">\'alex@devmail.com\'</span>,',
+            '    <span class="code-string">website</span>: <span class="code-string">\'alexdev.com\'</span>',
+            '    <span class="code-string">github</span>: <span class="code-string">\'alexdev\'</span>',
+            '    <span class="code-string">linkedin</span>: <span class="code-string">\'alexdev\'</span>',
+            '  }',
+            '};',
+            '',
+            '<span class="code-comment">// Technologies I love</span>',
+            '<span class="code-keyword">const</span> <span class="code-function">techStack</span> = [',
+            '  <span class="code-string">\'React\'</span>, <span class="code-string">\'Next.js\'</span>, <span class="code-string">\'Node.js\'</span>, <span class="code-string">\'TypeScript\'</span>,',
+            '  <span class="code-string">\'GraphQL\'</span>, <span class="code-string">\'Docker\'</span>, <span class="code-string">\'AWS\'</span>, <span class="code-string">\'Figma\'</span>',
+            '];',
+            '',
+            '<span class="code-comment">// Let\'s build something amazing together!</span>',
+            '<span class="code-function">contact</span>(developer);'
+        ];
+        
+        const codeEditor = document.getElementById('codeEditor');
+        let scrollLine = 0;
+        let scrollActive = false;
+        
+        function renderCodeLines() {
+            codeEditor.innerHTML = '';
+            let lastVisible = null;
+            for (let i = 0; i < codeLines.length; i++) {
+                const div = document.createElement('div');
+                div.className = 'code-line';
+                if (i <= scrollLine) {
+                    div.classList.add('visible');
+                    lastVisible = div;
+                }
+                div.innerHTML = codeLines[i];
+                codeEditor.appendChild(div);
+            }
+            // Auto-scroll to last visible line
+            if (lastVisible) {
+                lastVisible.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            }
+        }
+        
+        renderCodeLines();
+        
+        // Focus/blur logic for scroll animation
+        const codeWindow = document.querySelector('.code-window');
+        
+        codeWindow.addEventListener('click', (e) => {
+            if (!scrollActive) {
+                scrollActive = true;
+                codeWindow.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                codeEditor.tabIndex = 0;
+                codeEditor.focus();
+                liftCurtain();
+            }
+            e.stopPropagation();
+        });
+        
+        // Scroll to reveal lines
+        codeEditor.addEventListener('wheel', (e) => {
+            if (!scrollActive) return;
+            if (e.deltaY > 0 && scrollLine < codeLines.length - 1) {
+                scrollLine++;
+                renderCodeLines();
+            } else if (e.deltaY < 0 && scrollLine > 0) {
+                scrollLine--;
+                renderCodeLines();
+            }
+            e.preventDefault();
+        }, { passive: false });
+        
+        // Click outside to deactivate
+        document.addEventListener('click', (e) => {
+            if (scrollActive && !codeWindow.contains(e.target)) {
+                scrollActive = false;
+                codeWindow.classList.remove('active');
+                document.body.style.overflow = '';
+                codeCurtain.classList.remove('hide');
+                codeCurtain.style.display = '';
+            }
+        });
+        
+        // Prevent page scroll when active
+        window.addEventListener('wheel', (e) => {
+            if (scrollActive && !codeWindow.contains(e.target)) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+        
+        // Add parallax effect to shapes
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            const shapes = document.querySelectorAll('.shape');
+            shapes.forEach(shape => {
+                const speed = shape.classList.contains('shape-1') ? 0.02 : 0.05;
+                const xMove = x * speed * 100;
+                const yMove = y * speed * 100;
+                
+                shape.style.transform = `translate(${xMove}px, ${yMove}px)`;
+            });
+        });
+        
+        // Curtain logic
+        const codeCurtain = document.getElementById('codeCurtain');
+        
+        function liftCurtain() {
+            codeCurtain.classList.add('hide');
+            setTimeout(() => {
+                codeCurtain.style.display = 'none';
+            }, 700);
+        }
+        
+        // Animate hero text entrance
+        window.addEventListener('DOMContentLoaded', () => {
+            const heroTextEls = document.querySelectorAll('.hero-text > *');
+            heroTextEls.forEach((el, i) => {
+                setTimeout(() => {
+                    el.style.animationPlayState = 'running';
+                }, i * 250);
+            });
+        });
+        
+        // Animated stat numbers
+        function animateStatNumber(el, target, duration = 1200) {
+            let start = 0;
+            let startTime = null;
+            const plus = el.dataset.plus === 'true';
+            function animate(ts) {
+                if (!startTime) startTime = ts;
+                const progress = Math.min((ts - startTime) / duration, 1);
+                const value = Math.floor(progress * target);
+                el.textContent = value + (plus ? '+' : '') ;
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    el.textContent = target + (plus ? '+' : '');
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+        
+        window.addEventListener('DOMContentLoaded', () => {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach((el, i) => {
+                const target = parseInt(el.dataset.target, 10);
+                setTimeout(() => {
+                    el.classList.add('animated');
+                    animateStatNumber(el, target, 1200 + i * 200);
+                }, 1200 + i * 300);
+            });
+        });
+
+        // Premium hero animation: animated name and rotating titles
+        const heroHeadline = document.getElementById('heroHeadline');
+        const heroAnimatedName = document.getElementById('heroAnimatedName');
+        const heroTitles = [
+            'Areeb Anwar',
+            'Full Stack Web Developer',
+            'WordPress Developer'
+        ];
+        let heroTitleIndex = 0;
+        let heroCharIndex = 0;
+        let heroAnimating = false;
+        let heroTimeout;
+
+        function animateHeroTitleIn(text, callback, isName = false) {
+            heroAnimatedName.innerHTML = '';
+            let i = 0;
+            function nextChar() {
+                if (i <= text.length) {
+                    heroAnimatedName.innerHTML = `<span class="hero-anim-word${isName ? ' hero-name-glow' : ''}">${text.slice(0, i)}</span>` +
+                        `<span class="hero-anim-cursor">|</span>`;
+                    if (i === text.length) {
+                        heroAnimatedName.querySelector('.hero-anim-cursor').style.opacity = '0';
+                        setTimeout(() => callback && callback(), 900);
+                    } else {
+                        setTimeout(nextChar, 60 + Math.random() * 40);
+                    }
+                    i++;
+                }
+            }
+            nextChar();
+        }
+
+        function animateHeroTitleOut(callback) {
+            const word = heroAnimatedName.querySelector('.hero-anim-word');
+            if (!word) { callback && callback(); return; }
+            let text = word.textContent;
+            let i = text.length;
+            function eraseChar() {
+                if (i >= 0) {
+                    heroAnimatedName.innerHTML = `<span class="hero-anim-word">${text.slice(0, i)}</span><span class="hero-anim-cursor">|</span>`;
+                    i--;
+                    setTimeout(eraseChar, 25 + Math.random() * 25);
+                } else {
+                    callback && callback();
+                }
+            }
+            eraseChar();
+        }
+
+        function cycleHeroTitles() {
+            heroTitleIndex = (heroTitleIndex + 1) % heroTitles.length;
+            animateHeroTitleIn(heroTitles[heroTitleIndex], () => {
+                setTimeout(() => {
+                    animateHeroTitleOut(() => {
+                        setTimeout(cycleHeroTitles, 400);
+                    });
+                }, 1200);
+            }, heroTitleIndex === 0);
+        }
+
+        // Add premium styles for hero animation
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .hero-anim-word {
+                display: inline-block;
+                color: var(--primary);
+                font-size: 2.1rem;
+                font-weight: 600;
+                letter-spacing: 1px;
+                filter: drop-shadow(0 0 8px var(--primary));
+                transition: color 0.4s, filter 0.4s, transform 0.4s;
+            }
+            .hero-name-glow {
+                color: var(--accent);
+                filter: drop-shadow(0 0 16px var(--accent));
+                font-size: 3.5rem;
+                font-weight: 700;
+                letter-spacing: 2px;
+                text-shadow: 0 2px 16px var(--accent);
+            }
+            .hero-anim-cursor {
+                display: inline-block;
+                width: 1ch;
+                color: var(--primary);
+                animation: blink-cursor 0.8s steps(1) infinite;
+                font-weight: 700;
+                font-size: 2.1rem;
+                vertical-align: middle;
+            }
+        `;
+        document.head.appendChild(style);
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                animateHeroTitleIn(heroTitles[0], () => {
+                    setTimeout(() => {
+                        animateHeroTitleOut(() => {
+                            setTimeout(cycleHeroTitles, 400);
+                        });
+                    }, 1200);
+                }, true);
+            }, 900);
+        });
+
+        // Smooth snow effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const snowCanvas = document.getElementById('snow-canvas');
+            if (!snowCanvas) return;
+            
+            const ctx = snowCanvas.getContext('2d');
+            let snowflakes = [];
+            let snowW = window.innerWidth;
+            let snowH = window.innerHeight;
+
+            function resizeSnow() {
+                snowW = window.innerWidth;
+                snowH = window.innerHeight;
+                snowCanvas.width = snowW;
+                snowCanvas.height = snowH;
+            }
+            window.addEventListener('resize', resizeSnow);
+            resizeSnow();
+
+            function createSnowflakes(count = 80) {
+                snowflakes = [];
+                for (let i = 0; i < count; i++) {
+                    snowflakes.push({
+                        x: Math.random() * snowW,
+                        y: Math.random() * snowH,
+                        r: 1.2 + Math.random() * 2.8,
+                        d: 0.5 + Math.random() * 1.5,
+                        a: Math.random() * Math.PI * 2,
+                        drift: 0.5 + Math.random() * 1.5
+                    });
+                }
+            }
+            createSnowflakes();
+
+            function drawSnowflakes() {
+                ctx.clearRect(0, 0, snowW, snowH);
+                ctx.save();
+                ctx.globalAlpha = 0.9;
+                // Make snow more visible in both modes
+                const isLight = document.body.classList.contains('light-mode');
+                ctx.fillStyle = isLight ? '#eab308' : '#ffffff';
+                snowflakes.forEach(flake => {
+                    ctx.beginPath();
+                    ctx.arc(flake.x, flake.y, flake.r, 0, Math.PI * 2);
+                    ctx.fill();
+                });
+                ctx.restore();
+            }
+
+            function updateSnowflakes() {
+                for (let flake of snowflakes) {
+                    flake.y += flake.d;
+                    flake.x += Math.sin(flake.a) * flake.d * 0.4 + Math.cos(flake.a) * flake.d * flake.drift * 0.01;
+                    flake.a += 0.01 + Math.random() * 0.01;
+                    if (flake.y > snowH + 5) {
+                        flake.y = -5;
+                        flake.x = Math.random() * snowW;
+                    }
+                    if (flake.x > snowW + 5) flake.x = -5;
+                    if (flake.x < -5) flake.x = snowW + 5;
+                }
+            }
+
+            function snowLoop() {
+                drawSnowflakes();
+                updateSnowflakes();
+                requestAnimationFrame(snowLoop);
+            }
+            
+            // Store functions globally for theme switching
+            window.snowflakes = snowflakes;
+            window.updateSnowflakes = updateSnowflakes;
+            window.snowLoop = snowLoop;
+            
+            snowLoop();
+        });
+
+
+
+
+// Showcase JS
+
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.querySelector('.infinite-carousel');
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const slideWidth = slides[0].offsetWidth;
+  
+  // Clone slides for infinite effect
+  slides.forEach(slide => {
+    const clone = slide.cloneNode(true);
+    track.appendChild(clone);
+  });
+  
+  let currentPosition = 0;
+  const speed = 1; // pixels per frame
+  
+  function animate() {
+    currentPosition -= speed;
+    
+    // Reset position when we've scrolled all original slides
+    if (currentPosition <= -slideWidth * slides.length) {
+      currentPosition = 0;
+    }
+    
+    track.style.transform = `translateX(${currentPosition}px)`;
+    
+    // Only request animation frame if carousel is visible
+    if (isElementInViewport(carousel)) {
+      requestAnimationFrame(animate);
+    }
+  }
+  
+  // Start animation when carousel is in viewport
+  function handleIntersection(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        requestAnimationFrame(animate);
+      }
+    });
+  }
+  
+  const observer = new IntersectionObserver(handleIntersection);
+  observer.observe(carousel);
+  
+  // Pause on hover
+  carousel.addEventListener('mouseenter', () => {
+    track.style.animationPlayState = 'paused';
+  });
+  
+  carousel.addEventListener('mouseleave', () => {
+    track.style.animationPlayState = 'running';
+  });
+  
+  // Helper function to check if element is in viewport
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0
+    );
+  }
+});
+
+
+
+
+
+
+
+// Our Reviews JS
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize GSAP animations for each testimonial
+  const testimonialRows = [
+    document.querySelector('.testimonial-row-1'),
+    document.querySelector('.testimonial-row-2'), 
+    document.querySelector('.testimonial-row-3')
+  ];
+
+  // Left to Right animation for odd rows
+  gsap.to('.testimonial-text-1, .testimonial-text-3', {
+    x: '20%',
+    scrollTrigger: {
+      trigger: '.client-testimonials-section',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: 1
+    }
+  });
+
+  // Right to Left animation for even row
+  gsap.to('.testimonial-text-2', {
+    x: '-20%',
+    scrollTrigger: {
+      trigger: '.client-testimonials-section',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: 1
+    }
+  });
+
+  // Hover profile functionality
+  testimonialRows.forEach(row => {
+    const textElement = row.querySelector('[class^="testimonial-text"]');
+    const profileId = textElement.getAttribute('data-testimonial-profile');
+    const profileCard = document.getElementById(profileId);
+
+    textElement.addEventListener('mouseenter', (e) => {
+      profileCard.style.display = 'flex';
+      updateProfilePosition(e, profileCard);
+    });
+
+    textElement.addEventListener('mousemove', (e) => {
+      updateProfilePosition(e, profileCard);
+    });
+
+    textElement.addEventListener('mouseleave', () => {
+      profileCard.style.display = 'none';
+    });
+  });
+
+  function updateProfilePosition(e, profileCard) {
+    profileCard.style.left = `${e.clientX + 20}px`;
+    profileCard.style.top = `${e.clientY + 20}px`;
+  }
+
+  // Refresh ScrollTrigger after all animations are set up
+  ScrollTrigger.refresh();
+});
+
+
+
+
+
+
+
+
+// Projects JS
+
+const carousel = document.querySelector('.project-demo-showcase');
+        const imageAreas = document.querySelectorAll('.container .card .slide.slide1');
+        const modal = document.getElementById('demoModal');
+        const closeBtn = document.querySelector('.close');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalImages = document.getElementById('modalImages');
+        const viewDemoBtns = document.querySelectorAll('.view-demo-btn');
+        
+        // Project-specific images
+        const projectImages = {
+            'AdminEase': [
+                'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=600&fit=crop'
+            ],
+            'Quran Academy': [
+                'https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop'
+            ],
+            'WoodWave': [
+                'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&h=600&fit=crop'
+            ],
+            'Podcasto': [
+                'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop'
+            ],
+            'Listplace': [
+                'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop'
+            ],
+            'BeautyPalace': [
+                'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=600&fit=crop'
+            ],
+            'Aurora': [
+                'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop'
+            ],
+            'AutoLax': [
+                'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop'
+            ],
+            'ShoeLand': [
+                'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop',
+                'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=600&fit=crop'
+            ]
+        };
+        
+        // Carousel pause functionality
+        const cards = document.querySelectorAll('.container .card');
+        
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                carousel.style.animationPlayState = 'paused';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                carousel.style.animationPlayState = 'running';
+            });
+        });
+        
+        // Modal functionality
+        viewDemoBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const card = btn.closest('.card');
+                const title = card.querySelector('h3').textContent;
+                modalTitle.textContent = title + ' - Demo';
+                
+                // Load project-specific images
+                const images = projectImages[title] || [];
+                modalImages.innerHTML = '';
+                images.forEach((imageSrc, index) => {
+                    const img = document.createElement('img');
+                    img.src = imageSrc;
+                    img.alt = `${title} Demo ${index + 1}`;
+                    img.className = 'modal-image';
+                    modalImages.appendChild(img);
+                });
+                
+                modal.style.display = 'block';
+                carousel.style.animationPlayState = 'paused';
+            });
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+            carousel.style.animationPlayState = 'running';
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                carousel.style.animationPlayState = 'running';
+            }
+        });
+
+
+
+
+
+
+// Footer js
+// Initialize Cube Animation
+const cubeContainer = document.querySelector('.cube-container');
+const cubeBtn = document.querySelector('.cube-btn');
+
+// Pause animation initially
+let cubeAnimation = gsap.to(cubeBtn, {
+    rotationY: 360,
+    rotationX: 360,
+    duration: 16,
+    ease: "none",
+    paused: true,
+    repeat: -1
+});
+
+// Play on hover
+cubeContainer.addEventListener('mouseenter', () => {
+    cubeAnimation.play();
+});
+
+cubeContainer.addEventListener('mouseleave', () => {
+    cubeAnimation.pause();
+    gsap.to(cubeBtn, {
+        rotationY: 0,
+        rotationX: 0,
+        duration: 1,
+        ease: "back.out"
+    });
+});
+
+// Footer scroll animation
+gsap.utils.toArray('.footer-column').forEach((col, i) => {
+    gsap.from(col, {
+        opacity: 0,
+        y: 50,
+        duration: 0.8,
+        delay: i * 0.1,
+        scrollTrigger: {
+            trigger: '.footer',
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+});
+
+
+
+
+   
+    </script>
+
+    <!-- Light/Dark Mode Toggle Button -->
+    <div id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Light/Dark Mode">
+        <i class="fa fa-sun"></i>
+        <div class="theme-toggle-ripple"></div>
+    </div>
+
+    <style>
+    /* Light/Dark Mode Toggle Styles */
+    .theme-toggle-btn {
+        position: fixed;
+        bottom: 32px;
+        left: 32px;
+        z-index: 9999;
+        width: 56px;
+        height: 56px;
+        background: var(--secondary);
+        color: var(--primary);
+        border-radius: 50%;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+        overflow: visible;
+        font-size: 2rem;
+        border: 2.5px solid var(--primary);
+        outline: none;
+        animation: floatBtn 2.5s infinite cubic-bezier(.68,-0.55,.27,1.55) alternate;
+    }
+    @keyframes floatBtn {
+        0% { box-shadow: 0 4px 24px rgba(0,0,0,0.18); transform: translateY(0) scale(1); }
+        100% { box-shadow: 0 8px 32px rgba(234,179,8,0.18); transform: translateY(-8px) scale(1.06); }
+    }
+    .theme-toggle-btn .fa {
+        pointer-events: none;
+        transition: color 0.3s, transform 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+        z-index: 2;
+    }
+    .theme-toggle-btn:active {
+        transform: scale(0.95);
+    }
+    .theme-toggle-btn .theme-toggle-ripple {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 0;
+        height: 0;
+        background: radial-gradient(circle, #fff 60%, #fffbe6 100%);
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        opacity: 0.7;
+        z-index: 1;
+        transition: width 0.7s cubic-bezier(.68,-0.55,.27,1.55), height 0.7s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.7s;
+    }
+    body.light-mode .theme-toggle-btn {
+        background: var(--primary);
+        color: #fff;
+        border-color: #fffbe6;
+        box-shadow: 0 8px 32px rgba(234,179,8,0.18);
+    }
+    body.light-mode .theme-toggle-btn .fa {
+        color: #fff;
+    }
+    body.light-mode .theme-toggle-btn .theme-toggle-ripple {
+        width: 300vw;
+        height: 300vw;
+        opacity: 0;
+        transition: width 0.7s cubic-bezier(.68,-0.55,.27,1.55), height 0.7s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.7s;
+    }
+
+    /* Light Mode CSS Variables and Overrides */
+    body.light-mode {
+        --primary: #eab308;
+        --secondary: #fffbe6;
+        --dark: #fffbe6;
+        --light: #232025;
+        --accent: #d72660;
+        --gradient: linear-gradient(135deg, #fffbe6 0%, #f8f8fa 100%);
+        background: var(--dark);
+        color: var(--light);
+        transition: background 0.6s cubic-bezier(.68,-0.55,.27,1.55), color 0.6s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    body.light-mode .footer,
+    body.light-mode .profile-card,
+    body.light-mode .skills-card,
+    body.light-mode .service-card,
+    body.light-mode .code-window,
+    body.light-mode .modal-content {
+        background: #fff;
+        color: #232025;
+        border-color: #eab308;
+        box-shadow: 0 4px 24px rgba(234,179,8,0.08);
+        transition: background 0.6s, color 0.6s;
+    }
+    body.light-mode .section-title,
+    body.light-mode .footer-title {
+        color: #eab308;
+    }
+
+    body.light-mode .burger span {
+        background: #232025;
+    }
+    
+
+    body.light-mode .code-curtain{
+        background-color: #e8e6de;
+    }
+
+    body.light-mode .btn-primary {
+        background: var(--primary);
+        color: #fff;
+    }
+    body.light-mode .btn-secondary {
+        border-color: var(--primary);
+        color: var(--primary);
+        background: #fff;
+    }
+    body.light-mode .btn-secondary:hover {
+        background: var(--primary);
+        color: #fff;
+    }
+
+
+    
+    body.light-mode .window-header {
+        background: #fffbe6;
+        color: #232025;
+    }
+    body.light-mode .code-content {
+        background: #fffbe6;
+        color: #232025;
+    }
+
+    body.light-mode .code-comment { color: #bdbdbd; }
+    body.light-mode .code-keyword { color: #d72660; }
+    body.light-mode .code-function { color: #000000; }
+    body.light-mode .code-string { color: #eab308; }
+    body.light-mode .code-number { color: #d72660; }
+    body.light-mode .code-operator { color: #a29bfe; }
+    body.light-mode .stat-number { color: #eab308; }
+    body.light-mode .stat-label { color: #232025; }
+    body.light-mode .profile-card .title { color: #eab308; }
+    body.light-mode .skills-category { background: #fffbe6; border-color: #eab30822; }
+    body.light-mode .skill-tag { background: #fffbe6; color: #eab308; border-color: #eab30833; }
+    body.light-mode .skill-tag:hover { background: #eab308; color: #fff; }
+    body.light-mode .service-card { background: #fffbe6; border-color: #eab30822; }
+    body.light-mode .service-card h3 { color: #232025; }
+    body.light-mode .service-card:hover h3 { color: #eab308; }
+    body.light-mode .service-features span { background: #fffbe6; color: #eab308; }
+    body.light-mode .service-card:hover .service-features span { background: #eab308; color: #fff; }
+    body.light-mode .modal-content { background: #fff; color: #232025; }
+    body.light-mode .project-details { background: linear-gradient(to top, #fffbe6 0%, #fffbe6cc 50%, #fffbe600 100%); color: #232025; }
+    body.light-mode .project-title { color: #232025; }
+    body.light-mode .project-link { color: #eab308; }
+    body.light-mode .project-link:hover { color: #d72660; }
+    body.light-mode .testimonial-profile-card { background: #fff; color: #232025; }
+    body.light-mode .testimonial-profile-name { color: #eab308; }
+    body.light-mode .testimonial-platform-name { color: #d72660; }
+    body.light-mode .footer {
+        background: linear-gradient(180deg, rgba(255,251,230,0) 0%, #fffbe6 30%);
+        color: #232025;
+        border-top: 1px solid #eab30822;
+    }
+    body.light-mode .footer-link a { color: #232025bb; }
+    body.light-mode .footer-link a:hover { color: #eab308; }
+    body.light-mode .footer-link a:hover i { color: #d72660; }
+    body.light-mode .cube-face { background: var(--gradient); color: #232025; border-color: #eab30833; }
+    body.light-mode .cube-face.front { background: #fffbe6; }
+    body.light-mode .cube-face.back { background: #eab308; color: #fff; }
+    body.light-mode .cube-face.right { background: #d72660; color: #fff; }
+    body.light-mode .cube-face.left { background: #21759b; color: #fff; }
+    body.light-mode .cube-face.top { background: #eab308; color: #fff; }
+    body.light-mode .cube-face.bottom { background: #fffbe6; color: #232025; }
+    body.light-mode .social-link { color: #eab308; border-color: #eab308; background: #fffbe6; }
+    body.light-mode .social-link:hover { color: #fff; background: #eab308; border-color: #eab308; }
+    body.light-mode .social-link.github { color: #232025; }
+    body.light-mode .social-link.linkedin { color: #0077b5; }
+    body.light-mode .social-link.facebook { color: #1877f2; }
+    body.light-mode .social-link.instagram { color: #d72660; }
+    body.light-mode .social-link.devto { color: #232025; }
+    body.light-mode .social-link.pinterest { color: #d72660; }
+    /* Add more overrides as needed for perfect contrast */
+    </style>
+
+    <script>
+    // Light/Dark Mode Toggle Logic
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    const ripple = themeBtn.querySelector('.theme-toggle-ripple');
+    let isLight = false;
+    themeBtn.addEventListener('click', () => {
+        isLight = !isLight;
+        if (isLight) {
+            document.body.classList.add('light-mode');
+            ripple.style.transition = 'none';
+            ripple.style.width = ripple.style.height = '0';
+            ripple.style.opacity = '0.7';
+            setTimeout(() => {
+                ripple.style.transition = '';
+                ripple.style.width = ripple.style.height = '300vw';
+                ripple.style.opacity = '0';
+            }, 10);
+            themeBtn.querySelector('.fa').classList.replace('fa-sun', 'fa-moon');
+        } else {
+            document.body.classList.remove('light-mode');
+            ripple.style.transition = 'none';
+            ripple.style.width = ripple.style.height = '300vw';
+            ripple.style.opacity = '0';
+            setTimeout(() => {
+                ripple.style.transition = '';
+                ripple.style.width = ripple.style.height = '0';
+                ripple.style.opacity = '0.7';
+            }, 10);
+            themeBtn.querySelector('.fa').classList.replace('fa-moon', 'fa-sun');
+        }
+    });
+    </script>
+
+   
+    <script>
+    // Light/Dark Mode Toggle Logic with premium animation and light-passing effect
+    window._themeBtn = window._themeBtn || document.getElementById('theme-toggle-btn');
+    window._ripple = window._ripple || window._themeBtn.querySelector('.theme-toggle-ripple');
+    window._isLight = window._isLight || false;
+    window._themeBtn.addEventListener('click', () => {
+        document.body.classList.add('theme-transitioning');
+        window._isLight = !window._isLight;
+        if (window._isLight) {
+            window._ripple.style.transition = 'none';
+            window._ripple.style.width = window._ripple.style.height = '0';
+            window._ripple.style.opacity = '0.7';
+            setTimeout(() => {
+                window._ripple.style.transition = '';
+                window._ripple.style.width = window._ripple.style.height = '300vw';
+                window._ripple.style.opacity = '0';
+            }, 10);
+            setTimeout(() => {
+                document.body.classList.add('light-mode');
+                window._themeBtn.querySelector('.fa').classList.replace('fa-sun', 'fa-moon');
+            }, 600); // delay color change for ripple
+        } else {
+            window._ripple.style.transition = 'none';
+            window._ripple.style.width = window._ripple.style.height = '300vw';
+            window._ripple.style.opacity = '0';
+            setTimeout(() => {
+                window._ripple.style.transition = '';
+                window._ripple.style.width = window._ripple.style.height = '0';
+                window._ripple.style.opacity = '0.7';
+            }, 10);
+            setTimeout(() => {
+                document.body.classList.remove('light-mode');
+                window._themeBtn.querySelector('.fa').classList.replace('fa-moon', 'fa-sun');
+            }, 600);
+        }
+        setTimeout(() => {
+            document.body.classList.remove('theme-transitioning');
+        }, 1200);
+    });
+
+    // Snow color change based on mode
+    // Find the snow-canvas and update drawSnowflakes
+    window._snowCanvas = window._snowCanvas || document.getElementById('snow-canvas');
+    if (window._snowCanvas) {
+        const ctx = window._snowCanvas.getContext('2d');
+        let snowW = window.innerWidth;
+        let snowH = window.innerHeight;
+        function drawSnowflakes() {
+            ctx.clearRect(0, 0, snowW, snowH);
+            ctx.save();
+            ctx.globalAlpha = 0.9;
+            // Change color based on mode - make it more visible
+            const isLight = document.body.classList.contains('light-mode');
+            ctx.fillStyle = isLight ? '#eab308' : '#ffffff'; // brighter orange in light, pure white in dark
+            if (window.snowflakes) {
+                window.snowflakes.forEach(flake => {
+                    ctx.beginPath();
+                    ctx.arc(flake.x, flake.y, flake.r, 0, Math.PI * 2);
+                    ctx.fill();
+                });
+            }
+            ctx.restore();
+        }
+        // Patch the global snowLoop to use the new drawSnowflakes
+        if (window.snowLoop) {
+            const origSnowLoop = window.snowLoop;
+            window.snowLoop = function() {
+                drawSnowflakes();
+                if (window.updateSnowflakes) window.updateSnowflakes();
+                requestAnimationFrame(window.snowLoop);
+            };
+        }
+        // Listen for mode changes to redraw snow
+        const observer = new MutationObserver(drawSnowflakes);
+        observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    }
+
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const animatedElements = document.querySelectorAll(".animated");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const animationType = entry.target.dataset.animation; // Get animation type
+                const duration = entry.target.dataset.duration || "0.8s"; // Default: 0.8s
+                const delay = entry.target.dataset.delay || "0s"; // Default: 0s
+                entry.target.style.animation = `${animationType} ${duration} ease-out ${delay} forwards`;
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    }, { threshold: 0.2 }); // Trigger when 20% visible
+
+    animatedElements.forEach(el => observer.observe(el));
+});
+    </script>
+</body>
+</html>
+    </script>
+</body>
+</html>
