@@ -1,4 +1,3 @@
-
 /* Base Styles */
 :root {
     --primary: #eab308; /* premium gold */
@@ -46,6 +45,9 @@ body {
     overflow-x: hidden;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 
 
 /* HAMBURGER MENU */
@@ -2919,3 +2921,136 @@ opacity: 0;
   
   
   
+
+
+
+
+
+
+
+
+
+  @media (max-width: 768px) {
+    .menu-item {
+      width: 100% !important;
+      max-width: 100vw;
+      font-size: 1.1rem;
+      padding-right: 12px;
+      box-sizing: border-box;
+      margin: 10px 0; /* More vertical spacing */
+      border-bottom: 1px solid rgba(234,179,8,0.12); /* Subtle divider */
+      border-radius: 8px;
+    }
+    .menu-item:last-child {
+      border-bottom: none;
+    }
+    .menu-wrapper {
+      left: 0;
+      width: 100vw;
+      padding: 0 4px;
+    }
+  }
+  @media (max-width: 480px) {
+    .menu-item {
+      font-size: 1rem;
+      padding-right: 8px;
+    }
+  }
+
+@media (max-width: 768px) {
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  .stat-item {
+    min-width: 110px;
+    flex: 1 1 110px;
+    max-width: 140px;
+  }
+  .stat-number {
+    font-size: 1.3rem;
+  }
+
+  .stat-label{
+    font-size: 0.4rem;
+  }
+  .hero-image,
+  .code-window {
+    max-width: 100vw;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .hero,
+  .hero-content {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 480px) {
+  .stat-item {
+    min-width: 70px;
+    max-width: 90px;
+  }
+  .stat-number {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-socials.outlined .social-link {
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+  .profile-socials.outlined .social-link i {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 480px) {
+  .profile-socials.outlined .social-link {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+  .profile-socials.outlined .social-link i {
+    font-size: 1rem;
+  }
+}
+
+.modal-content.fullscreen {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 2000;
+  background: var(--secondary);
+  transition: all 0.3s;
+}
+.fullscreen-btn {
+  position: absolute;
+  top: 18px;
+  right: 60px;
+  z-index: 1002;
+  background: none;
+  border: none;
+  color: var(--light);
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s;
+}
+.fullscreen-btn:hover {
+  color: var(--primary);
+}
+@media (max-width: 600px) {
+  .fullscreen-btn {
+    right: 32px;
+    font-size: 1.2rem;
+  }
+}
