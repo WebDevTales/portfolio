@@ -3054,3 +3054,74 @@ opacity: 0;
     font-size: 1.2rem;
   }
 }
+
+.skill-tag.html { --brand: #e34f26; }
+.skill-tag.css { --brand: #1572b6; }
+.skill-tag.js { --brand: #f7df1e; color: #222; }
+.skill-tag.firebase { --brand: #ffca28; }
+.skill-tag.supabase { --brand: #3ecf8e; }
+.skill-tag.cloudinary { --brand: #3448c5; }
+.skill-tag.rest { --brand: #00bcd4; }
+.skill-tag.websockets { --brand: #00bfae; }
+.skill-tag.customcode { --brand: #fd79a8; }
+.skill-tag.gutenberg { --brand: #1e1e1e; }
+.skill-tag.rankmath { --brand: #5e2ced; }
+.skill-tag.yostseo { --brand: #2e7ad3; }
+.skill-tag.wpforms { --brand: #ff7a59; }
+.skill-tag.github { --brand: #333; }
+.skill-tag.spline { --brand: #6c47ff; }
+.skill-tag.vue { --brand: #42b883; }
+
+.skill-tag { color: var(--brand); }
+.skill-tag .skill-icon { color: var(--brand); }
+
+body.light-mode .skill-tag { color: var(--brand) !important; }
+body.light-mode .skill-tag .skill-icon { color: var(--brand) !important; }
+
+#splash-logo {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: linear-gradient(135deg, #232025 60%, #2d292f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  transition: opacity 0.8s cubic-bezier(.77,0,.18,1), visibility 0.8s;
+  opacity: 1;
+  visibility: visible;
+}
+#splash-logo.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.splash-logo-text {
+  font-family: 'Orbitron', 'Montserrat', 'Poppins', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  color: #eab308;
+  background: linear-gradient(90deg, #eab308 40%, #fffbe6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0 4px 32px #eab30844, 0 2px 8px #fffbe6aa;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.splash-logo-highlight {
+  color: #fffbe6;
+  background: linear-gradient(90deg, #fffbe6 0%, #eab308 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0 2px 16px #fffbe6cc, 0 0px 8px #eab30899;
+}
+@media (max-width: 600px) {
+  .splash-logo-text {
+    font-size: 2rem;
+  }
+}

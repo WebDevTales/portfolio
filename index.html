@@ -14,8 +14,9 @@
 </head>
 <body>
 
-
-
+<div id="splash-logo">
+  <span class="splash-logo-text">AREEB <span class="splash-logo-highlight">ANWAR</span></span>
+</div>
 
     <canvas id="snow-canvas"></canvas>
     <div class="cursor"></div>
@@ -2441,6 +2442,15 @@ gsap.utils.toArray('.footer-column').forEach((col, i) => {
           }
         });
       });
+    });
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const splash = document.getElementById('splash-logo');
+      setTimeout(() => {
+        splash.classList.add('hide');
+      }, 1800);
     });
     </script>
 </body>
